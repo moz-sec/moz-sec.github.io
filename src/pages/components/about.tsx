@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { PiSignatureFill } from "react-icons/pi";
+import { FaLocationDot, FaSquareXTwitter } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -9,20 +12,25 @@ const About = () => {
       </h2>
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
         <div className="flex-1 text-lg text-white">
-          <p className="mb-2">小林 舜 Kobayashi Shun</p>
-          <p className="mb-2">京都</p>
           <p className="mb-2">
-            <a
-              href="mailto:m0253c@gmail.com"
-              className="text-blue-300 underline"
-            >
+            <PiSignatureFill className="inline-block mr-2" />
+            Kobayashi Shun
+          </p>
+          <p className="mb-2">
+            <FaLocationDot className="inline-block mr-2" />
+            京都
+          </p>
+          <p className="mb-2">
+            <FaEnvelope className="inline-block mr-2" />
+            <a href="mailto:m0253c@gmail.com" className="text-blue-300">
               m0253c@gmail.com
             </a>
           </p>
           <p>
+            <FaSquareXTwitter className="inline-block mr-2" />
             <a
               href="https://x.com/moz_sec_"
-              className="text-blue-300 underline"
+              className="text-blue-300"
               target="_blank"
               rel="noopener noreferrer"
             >
