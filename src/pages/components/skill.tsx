@@ -15,13 +15,16 @@ const services = [
 export default function Skills() {
   return (
     <section id="skills" className="py-16 max-w-6xl mx-auto">
-      <h2 className="text-2xl font-bold mb-8 text-center text-white tracking-wide relative">
+      <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative text-[var(--foreground)]">
         <span className="relative z-10">Skills</span>
         <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {services.map((s, i) => (
-          <div key={i} className="bg-gray-900 p-6 rounded-xl text-center">
+          <div
+            key={i}
+            className="p-6 rounded-xl text-center text-[var(--card-foreground)] bg-[var(--card-background)]"
+          >
             <div className="relative w-24 h-24 mx-auto mb-4">
               <svg
                 viewBox="0 0 36 36"
@@ -47,11 +50,11 @@ export default function Skills() {
                   strokeWidth="2"
                 />
               </svg>
-              <span className="absolute inset-0 flex items-center justify-center text-white font-bold">
+              <span className="absolute inset-0 flex items-center justify-center font-bold">
                 {s.percent}%
               </span>
             </div>
-            <h3 className="text-lg font-semibold text-white">{s.title}</h3>
+            <h3 className="text-lg font-semibold">{s.title}</h3>
           </div>
         ))}
       </div>

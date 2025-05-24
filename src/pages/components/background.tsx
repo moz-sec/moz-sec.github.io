@@ -46,7 +46,7 @@ const events = [
 export default function Background() {
   return (
     <section id="background" className="max-w-2xl mx-auto py-12">
-      <h2 className="text-2xl font-bold mb-8 text-center text-white tracking-wide relative">
+      <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative">
         <span className="relative z-10">Background</span>
         <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
       </h2>
@@ -66,7 +66,7 @@ export default function Background() {
               <time className="text-sm font-medium text-gray-400 min-w-[120px]">
                 {e.date}
               </time>
-              <span className="text-base font-normal text-white">{e.desc}</span>
+              <span className="text-base font-normal">{e.desc}</span>
             </div>
           </li>
         ))}

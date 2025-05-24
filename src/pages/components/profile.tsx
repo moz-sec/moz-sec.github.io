@@ -27,15 +27,15 @@ const profileItems = [
 const Profile = () => {
   return (
     <section id="profile" className="max-w-2xl mx-auto py-12">
-      <h2 className="text-2xl font-bold mb-8 text-center text-white tracking-wide relative">
+      <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative text-[var(--foreground)]">
         <span className="relative z-10">Profile</span>
         <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
       </h2>
-      <div className="bg-gray-800/70 rounded-xl shadow-lg p-8 space-y-6">
+      <div className="rounded-xl shadow-lg p-8 space-y-6 text-[var(--card-foreground)] bg-[var(--card-background)]">
         {profileItems.map((item, i) => (
           <div key={i} className="flex items-start">
             {item.icon}
-            <span className="text-gray-100 text-base">{item.text}</span>
+            <span className="text-base">{item.text}</span>
           </div>
         ))}
       </div>
