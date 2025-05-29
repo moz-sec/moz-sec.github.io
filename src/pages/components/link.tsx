@@ -6,37 +6,37 @@ const links = [
     title: "GitHub",
     url: "https://github.com/moz-sec",
     icon: <FaGithub className="text-4xl" />,
-    color: "hover:bg-gray-700",
+    color: "hover:bg-gray-300 dark:hover:bg-gray-700",
   },
   {
     title: "はてなブログ",
     url: "https://moz-security.hatenablog.com/",
     icon: <FaBlog className="text-4xl" />,
-    color: "hover:bg-blue-700",
+    color: "hover:bg-blue-300 dark:hover:bg-blue-700",
   },
   {
     title: "勉強ノート",
     url: "https://moz-sec.com/note/",
     icon: <FaBook className="text-4xl" />,
-    color: "hover:bg-green-700",
+    color: "hover:bg-green-300 dark:hover:bg-green-700",
   },
   {
     title: "Hack The Box",
     url: "https://app.hackthebox.com/users/975147",
     icon: <FaHackerrank className="text-4xl" />,
-    color: "hover:bg-yellow-600",
+    color: "hover:bg-yellow-300 dark:hover:bg-yellow-700",
   },
   {
     title: "Zenn",
     url: "https://zenn.dev/moz_sec",
     icon: <SiZenn className="text-4xl" />,
-    color: "hover:bg-cyan-600",
+    color: "hover:bg-cyan-300 dark:hover:bg-cyan-700",
   },
   {
     title: "Wantedly",
     url: "https://www.wantedly.com/id/moz_sec_",
     icon: <SiWantedly className="text-4xl" />,
-    color: "hover:bg-indigo-600",
+    color: "hover:bg-indigo-300 dark:hover:bg-indigo-700",
   },
 ];
 
