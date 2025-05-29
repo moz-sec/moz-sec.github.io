@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Script from "next/script";
-import About from "./components/about";
-import Skills from "./components/skill";
-import Navbar from "./components/navBar";
-import Background from "./components/background";
-import Interest from "./components/interest";
-import Links from "./components/link";
-import Profile from "./components/profile";
+import About from "./components/About";
+import Skills from "./components/Skill";
+import Navbar from "./components/NavBar";
+import Background from "./components/Background";
+import Interest from "./components/Interest";
+import Links from "./components/Link";
+import Profile from "./components/Profile";
 
 export default function Home() {
   return (
