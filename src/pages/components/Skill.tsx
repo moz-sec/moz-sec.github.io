@@ -4,12 +4,14 @@ import {
   SiTypescript,
   SiCss3,
   SiPhp,
-  SiReact,
   SiC,
   SiPython,
   SiGo,
   SiRust,
+  SiFastapi,
+  SiCakephp,
 } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 import { FaJava, FaStar } from "react-icons/fa";
 
 const skillCategories = [
@@ -17,9 +19,9 @@ const skillCategories = [
     title: "プログラミング言語",
     skills: [
       {
-        title: "Python",
-        level: 4,
-        icon: <SiPython className="text-4xl text-[#3776AB]" />,
+        title: "C",
+        level: 2,
+        icon: <SiC className="text-4xl text-[#A8B9CC]" />,
       },
       {
         title: "Java",
@@ -27,8 +29,13 @@ const skillCategories = [
         icon: <FaJava className="text-4xl text-[#007396]" />,
       },
       {
+        title: "Python",
+        level: 4,
+        icon: <SiPython className="text-4xl text-[#3776AB]" />,
+      },
+      {
         title: "Go",
-        level: 2,
+        level: 3,
         icon: <SiGo className="text-4xl text-[#00ADD8]" />,
       },
       {
@@ -37,9 +44,9 @@ const skillCategories = [
         icon: <SiRust className="text-4xl text-[#DEA584]" />,
       },
       {
-        title: "C",
+        title: "PHP",
         level: 2,
-        icon: <SiC className="text-4xl text-[#A8B9CC]" />,
+        icon: <SiPhp className="text-4xl text-[#777BB4]" />,
       },
     ],
   },
@@ -48,38 +55,43 @@ const skillCategories = [
     skills: [
       {
         title: "HTML",
-        level: 1,
+        level: 2,
         icon: <SiHtml5 className="text-4xl text-[#E34F26]" />,
       },
       {
         title: "CSS",
-        level: 1,
+        level: 2,
         icon: <SiCss3 className="text-4xl text-[#1572B6]" />,
       },
       {
         title: "JavaScript",
-        level: 1,
+        level: 2,
         icon: <SiJavascript className="text-4xl text-[#F7DF1E]" />,
       },
       {
         title: "TypeScript",
-        level: 1,
+        level: 2,
         icon: <SiTypescript className="text-4xl text-[#3178C6]" />,
-      },
-      {
-        title: "PHP",
-        level: 1,
-        icon: <SiPhp className="text-4xl text-[#777BB4]" />,
       },
     ],
   },
   {
-    title: "フレームワーク",
+    title: "Webフレームワーク",
     skills: [
       {
-        title: "React",
+        title: "Next.js",
+        level: 2,
+        icon: <RiNextjsFill className="text-4xl text-[#000000]" />,
+      },
+      {
+        title: "FastAPI",
+        level: 3,
+        icon: <SiFastapi className="text-4xl text-[#009688]" />,
+      },
+      {
+        title: "CakePHP",
         level: 1,
-        icon: <SiReact className="text-4xl text-[#61DAFB]" />,
+        icon: <SiCakephp className="text-4xl text-[#D33F49]" />,
       },
     ],
   },
