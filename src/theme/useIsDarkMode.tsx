@@ -16,17 +16,15 @@ export const DarkModeProvider = ({
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    if (
+    const prefersDark =
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setIsDark(false);
-    }
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+    document.documentElement.classList.toggle("dark", prefersDark);
+    // Client-only storage and media-query state is unavailable during SSR.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsDark(prefersDark);
   }, []);
 
   const toggleDarkMode = () => {

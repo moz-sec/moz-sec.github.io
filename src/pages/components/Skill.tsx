@@ -2,7 +2,7 @@ import {
   SiHtml5,
   SiJavascript,
   SiTypescript,
-  SiCss3,
+  SiCss,
   SiPhp,
   SiC,
   SiPython,
@@ -61,7 +61,7 @@ const skillCategories = [
       {
         title: "CSS",
         level: 2,
-        icon: <SiCss3 className="text-4xl text-[#1572B6]" />,
+        icon: <SiCss className="text-4xl text-[#1572B6]" />,
       },
       {
         title: "JavaScript",
