@@ -24,13 +24,13 @@ const About = () => {
           </p>
           <p className="mb-2">
             <FaLocationDot className="inline-block mr-2" />
-            京都
+            東京
           </p>
           <p className="mb-2">
             <FaEnvelope className="inline-block mr-2" />
             <a
               href="mailto:m0253c@gmail.com"
-              className="hover:text-[var(--link-hover-color)] transition-colors"
+              className="hover:text-(--link-hover-color) transition-colors"
             >
               m0253c@gmail.com
             </a>
@@ -39,7 +39,7 @@ const About = () => {
             <FaSquareXTwitter className="inline-block mr-2" />
             <a
               href="https://x.com/moz_sec_"
-              className="hover:text-[var(--link-hover-color)] transition-colors"
+              className="hover:text-(--link-hover-color) transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,22 +1,19 @@
 import {
-  FaUserGraduate,
-  FaLaptopCode,
   FaAward,
-  FaSearch,
+  FaGrinStars,
 } from "react-icons/fa";
+
+import { MdOutlineWork } from "react-icons/md";
+
 
 const profileItems = [
   {
-    icon: <FaUserGraduate className="text-blue-400 text-2xl mr-3" />,
-    text: "京都産業大学大学院 先端情報学専攻",
+    icon: <MdOutlineWork className="text-blue-400 text-2xl mr-3" />,
+    text: "スリーシェイク",
   },
   {
-    icon: <FaSearch className="text-green-400 text-2xl mr-3" />,
-    text: "研究はネットワークやセキュリティ",
-  },
-  {
-    icon: <FaLaptopCode className="text-yellow-400 text-2xl mr-3" />,
-    text: "OSからWebアプリまで幅広く技術を探求",
+    icon: <FaGrinStars className="text-green-400 text-2xl mr-3" />,
+    text: "Kubernetes、クラウド、セキュリティ、Webアプリケーション開発",
   },
   {
     icon: <FaAward className="text-pink-400 text-2xl mr-3" />,
@@ -27,11 +24,11 @@ const profileItems = [
 const Profile = () => {
   return (
     <section id="profile" className="max-w-2xl mx-auto py-12">
-      <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative text-[var(--foreground)]">
+      <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative text-(--foreground)">
         <span className="relative z-10">Profile</span>
         <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
       </h2>
-      <div className="rounded-xl shadow-lg p-8 space-y-6 text-[var(--card-foreground)] bg-[var(--card-background)]">
+      <div className="rounded-xl shadow-lg p-8 space-y-6 text-(--card-foreground) bg-[--card-background]">
         {profileItems.map((item, i) => (
           <div key={i} className="flex items-start">
             {item.icon}
