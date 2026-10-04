@@ -3,11 +3,11 @@ import { FaFeatherAlt, FaMoon, FaSun } from "react-icons/fa";
 import { useDarkMode } from "@/theme/useIsDarkMode";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Profile", href: "#profile" },
-  { label: "Interest", href: "#interest" },
-  { label: "Links", href: "#links" },
-  { label: "Background", href: "#background" },
+  { label: "自己紹介", href: "#about" },
+  { label: "興味", href: "#interest" },
+  { label: "リンク", href: "#links" },
+  { label: "資格", href: "#certifications" },
+  { label: "経歴", href: "#background" },
 ];
 
 export default function Navbar() {

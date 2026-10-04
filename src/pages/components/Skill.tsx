@@ -51,7 +51,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Web開発",
+    title: "ウェブ開発",
     skills: [
       {
         title: "HTML",
@@ -76,7 +76,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Webフレームワーク",
+    title: "ウェブフレームワーク",
     skills: [
       {
         title: "Next.js",
@@ -101,8 +101,7 @@ export default function Skills() {
   return (
     <section id="skills" className="max-w-4xl mx-auto py-12">
       <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative text-[var(--foreground)]">
-        <span className="relative z-10">Skills</span>
-        <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
+        <span className="relative z-10">スキル</span>
       </h2>
       <div className="space-y-12">
         {skillCategories.map((category, categoryIndex) => (

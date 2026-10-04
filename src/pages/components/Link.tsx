@@ -15,12 +15,6 @@ const links = [
     color: "hover:bg-blue-300 dark:hover:bg-blue-700",
   },
   {
-    title: "勉強ノート",
-    url: "https://moz-sec.com/note/",
-    icon: <FaBook className="text-4xl" />,
-    color: "hover:bg-green-300 dark:hover:bg-green-700",
-  },
-  {
     title: "Hack The Box",
     url: "https://app.hackthebox.com/users/975147",
     icon: <FaHackerrank className="text-4xl" />,
@@ -32,20 +26,13 @@ const links = [
     icon: <SiZenn className="text-4xl" />,
     color: "hover:bg-cyan-300 dark:hover:bg-cyan-700",
   },
-  {
-    title: "Wantedly",
-    url: "https://www.wantedly.com/id/moz_sec_",
-    icon: <SiWantedly className="text-4xl" />,
-    color: "hover:bg-indigo-300 dark:hover:bg-indigo-700",
-  },
 ];
 
 export default function Links() {
   return (
     <section id="links" className="max-w-4xl mx-auto py-12">
       <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative">
-        <span className="relative z-10">Links</span>
-        <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
+        <span className="relative z-10">リンク</span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {links.map((link, i) => (

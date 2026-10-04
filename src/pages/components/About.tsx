@@ -13,8 +13,7 @@ const About = () => {
       className="max-w-4xl mx-auto py-12 text-[var(--foreground)]"
     >
       <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative">
-        <span className="relative z-10">About</span>
-        <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
+        <span className="relative z-10">自己紹介</span>
       </h2>
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
         <div className="flex-1 text-lg">

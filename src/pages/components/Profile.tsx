@@ -1,10 +1,6 @@
-import {
-  FaAward,
-  FaGrinStars,
-} from "react-icons/fa";
+import { FaAward, FaGrinStars } from "react-icons/fa";
 
 import { MdOutlineWork } from "react-icons/md";
-
 
 const profileItems = [
   {
@@ -26,7 +22,6 @@ const Profile = () => {
     <section id="profile" className="max-w-2xl mx-auto py-12">
       <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative text-(--foreground)">
         <span className="relative z-10">Profile</span>
-        <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-blue-500 rounded-full z-0"></span>
       </h2>
       <div className="rounded-xl shadow-lg p-8 space-y-6 text-(--card-foreground) bg-[--card-background]">
         {profileItems.map((item, i) => (

@@ -6,7 +6,7 @@ import Navbar from "./components/NavBar";
 import Background from "./components/Background";
 import Interest from "./components/Interest";
 import Links from "./components/Link";
-import Profile from "./components/Profile";
+import Certifications from "./components/Certifications";
 
 export default function Home() {
   return (
@@ -47,10 +47,10 @@ export default function Home() {
       <main>
         <Navbar />
         <About />
-        <Profile />
         <Interest />
         <Links />
         <Skills />
+        <Certifications />
         <Background />
       </main>
     </>
