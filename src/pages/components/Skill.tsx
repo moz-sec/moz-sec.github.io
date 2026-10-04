@@ -1,97 +1,56 @@
 import {
-  SiHtml5,
-  SiJavascript,
-  SiTypescript,
-  SiCss,
-  SiPhp,
-  SiC,
+  SiGooglecloud,
+  SiKubernetes,
   SiPython,
   SiGo,
-  SiRust,
-  SiFastapi,
-  SiCakephp,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiTypescript,
 } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
-import { FaJava, FaStar } from "react-icons/fa";
+import { FaCloud } from "react-icons/fa";
 
-const skillCategories = [
+const skillGroups = [
   {
-    title: "プログラミング言語",
+    title: "クラウド・インフラ",
+    summary: "パブリッククラウド・コンテナ基盤",
+    featured: true,
     skills: [
       {
-        title: "C",
-        level: 2,
-        icon: <SiC className="text-4xl text-[#A8B9CC]" />,
+        name: "AWS",
+        icon: <FaCloud className="text-[#FF9900]" />,
       },
       {
-        title: "Java",
-        level: 2,
-        icon: <FaJava className="text-4xl text-[#007396]" />,
+        name: "Google Cloud",
+        icon: <SiGooglecloud className="text-[#4285F4]" />,
       },
       {
-        title: "Python",
-        level: 4,
-        icon: <SiPython className="text-4xl text-[#3776AB]" />,
-      },
-      {
-        title: "Go",
-        level: 3,
-        icon: <SiGo className="text-4xl text-[#00ADD8]" />,
-      },
-      {
-        title: "Rust",
-        level: 2,
-        icon: <SiRust className="text-4xl text-[#DEA584]" />,
-      },
-      {
-        title: "PHP",
-        level: 2,
-        icon: <SiPhp className="text-4xl text-[#777BB4]" />,
+        name: "Kubernetes",
+        icon: <SiKubernetes className="text-[#326CE5]" />,
       },
     ],
   },
   {
-    title: "ウェブ開発",
+    title: "バックエンド",
+    summary: "Python・Goで実装できます",
     skills: [
-      {
-        title: "HTML",
-        level: 2,
-        icon: <SiHtml5 className="text-4xl text-[#E34F26]" />,
-      },
-      {
-        title: "CSS",
-        level: 2,
-        icon: <SiCss className="text-4xl text-[#1572B6]" />,
-      },
-      {
-        title: "JavaScript",
-        level: 2,
-        icon: <SiJavascript className="text-4xl text-[#F7DF1E]" />,
-      },
-      {
-        title: "TypeScript",
-        level: 2,
-        icon: <SiTypescript className="text-4xl text-[#3178C6]" />,
-      },
+      { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
+      { name: "Go", icon: <SiGo className="text-[#00ADD8]" /> },
     ],
   },
   {
-    title: "ウェブフレームワーク",
+    title: "フロントエンド",
+    summary: "既存コードを読んで理解できます",
     skills: [
+      { name: "HTML", icon: <SiHtml5 className="text-[#E34F26]" /> },
+      { name: "CSS", icon: <SiCss className="text-[#1572B6]" /> },
       {
-        title: "Next.js",
-        level: 2,
-        icon: <RiNextjsFill className="text-4xl text-[#000000]" />,
+        name: "JavaScript",
+        icon: <SiJavascript className="text-[#D4A900]" />,
       },
       {
-        title: "FastAPI",
-        level: 3,
-        icon: <SiFastapi className="text-4xl text-[#009688]" />,
-      },
-      {
-        title: "CakePHP",
-        level: 1,
-        icon: <SiCakephp className="text-4xl text-[#D33F49]" />,
+        name: "TypeScript",
+        icon: <SiTypescript className="text-[#3178C6]" />,
       },
     ],
   },
@@ -99,40 +58,49 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-4xl mx-auto py-12">
-      <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative text-[var(--foreground)]">
-        <span className="relative z-10">スキル</span>
+    <section id="skills" className="max-w-4xl mx-auto py-12 px-4">
+      <h2 className="text-2xl font-bold mb-3 text-center tracking-wide text-(--foreground)">
+        スキル
       </h2>
-      <div className="space-y-12">
-        {skillCategories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="space-y-6">
-            <h3 className="text-xl font-semibold text-[var(--foreground)]">
-              {category.title}
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {category.skills.map((skill, skillIndex) => (
-                <div
-                  key={skillIndex}
-                  className={`flex flex-col items-center p-6 rounded-xl shadow-lg transition transform hover:-translate-y-1 hover:scale-105 text-[var(--card-foreground)] bg-[var(--card-background)]`}
-                >
-                  {skill.icon}
-                  <div className="flex justify-center items-center gap-1 my-4">
-                    {[...Array(5)].map((_, index) => (
-                      <FaStar
-                        key={index}
-                        className={`text-xl ${
-                          index < skill.level
-                            ? "text-yellow-500"
-                            : "text-gray-300 dark:text-gray-600"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <h3 className="text-lg font-semibold">{skill.title}</h3>
-                </div>
-              ))}
+      <p className="mb-8 text-center text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+        クラウド・インフラを中心に、バックエンド開発にも取り組んでいます。
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {skillGroups.map((group) => (
+          <section
+            key={group.title}
+            className={`rounded-xl border p-6 text-(--card-foreground) bg---card-background) ${
+              group.featured
+                ? "md:col-span-2 border-blue-300 shadow-lg dark:border-blue-800"
+                : "border-gray-200 shadow-md dark:border-gray-700"
+            }`}
+          >
+            <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1">
+              <h3 className="text-lg font-semibold">{group.title}</h3>
+              <p className="w-full text-sm text-gray-600 dark:text-gray-300">
+                {group.summary}
+              </p>
             </div>
-          </div>
+            <ul
+              className={`grid gap-3 ${
+                group.featured ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-2"
+              }`}
+            >
+              {group.skills.map((skill) => (
+                <li
+                  key={skill.name}
+                  className={`flex gap-3 rounded-lg bg-gray-100/80 px-4 py-3 dark:bg-gray-800/70 ${
+                    group.featured
+                      ? "flex-col items-center text-center sm:gap-2 sm:py-5"
+                      : "items-center"
+                  }`}
+                >
+                  <span className="shrink-0 text-2xl">{skill.icon}</span>
+                  <span className="font-medium">{skill.name}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
         ))}
       </div>
     </section>
