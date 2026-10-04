@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { PiSignatureFill } from "react-icons/pi";
 import { FaLocationDot, FaSquareXTwitter } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
 import { useDarkMode } from "@/theme/useIsDarkMode";
+import { MdDriveFileRenameOutline } from "react-icons/md";
 
 const About = () => {
   const { isDark } = useDarkMode();
@@ -15,8 +15,8 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
         <div className="flex-1 text-lg">
           <p className="mb-2">
-            <PiSignatureFill className="inline-block mr-2" />
-            Kobayashi Shun
+            <MdDriveFileRenameOutline className="inline-block mr-2" />
+            小林 舜（Moz）
           </p>
           <p className="mb-2">
             <FaLocationDot className="inline-block mr-2" />
