@@ -1,69 +1,42 @@
 const events = [
+  { date: "2020/04/01 - 2024/03/31", desc: "京都産業大学 情報理工学部" },
   {
-    date: "2022/03/19",
-    desc: "京都産業大学 第30回 デジタルコンテンツコンテスト最優秀賞",
-  },
-  { date: "2022/08/08 - 2022/08/09", desc: "PR TIMES HACKATHON 2022 Summer" },
-  {
-    date: "2022/08/29 - 2021/09/09",
-    desc: "NEC ネッツエスアイ サイバーセキュリティインターンシップ 2 Weeks",
-  },
-  {
-    date: "2023/03/01 - 2023/09/30",
-    desc: "株式会社 DONUTS 開発グループ インターンシップ",
-  },
-  { date: "2023/04/29 - 2023/04/30", desc: "DevSecOpsThon 2023 at GMO kitaQ" },
-  {
-    date: "2023/08/07 - 2023/08/11",
-    desc: "セキュリティ・キャンプ 全国大会 2023 Bクラス(Web)",
-  },
-  {
-    date: "2024/03/18 - 2024/03/29",
-    desc: "スリーシェイク 短期インターンシップ",
-  },
-  {
-    date: "2024/06/01 - 2026/03/31",
-    desc: "スリーシェイク 長期インターンシップ",
-  },
-  {
-    date: "2024/08/12 - 2023/08/16",
-    desc: "セキュリティ・キャンプ 全国大会 2024 Bクラス(Web) チューター",
-  },
-  { date: "2024/11/18 - 2024/11/19", desc: "C0DE BLUE 学生スタッフ" },
-  {
-    date: "2025/03/17 - 2025/04/11",
-    desc: "ファーストリテイリング インターンシップ",
+    date: "2024/04/01 - 2026/03/31",
+    desc: "京都産業大学大学院 先端情報学研究科",
   },
   { date: "2026/04/01 - 現在", desc: "スリーシェイク ソフトウェアエンジニア" },
 ];
 
+function EventTimeline({ items }: { items: typeof events }) {
+  return (
+    <ol className="relative ml-3 border-l border-gray-300 pl-6 dark:border-gray-700">
+      {items.map((event) => (
+        <li
+          key={`${event.date}-${event.desc}`}
+          className="relative pb-8 last:pb-0"
+        >
+          <span className="absolute -left-7.75 top-1 h-3 w-3 rounded-full border-2 border-blue-500 bg-(--background)"></span>
+          <div className="flex flex-col gap-1">
+            <time className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+              {event.date}
+            </time>
+            <span className="text-base leading-relaxed text-(--foreground)">
+              {event.desc}
+            </span>
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 export default function Background() {
   return (
-    <section id="background" className="max-w-2xl mx-auto py-12">
+    <section id="background" className="min-w-0 py-12">
       <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative">
         <span className="relative z-10">経歴</span>
       </h2>
-      <ol className="relative border-l border-gray-700">
-        {events.map((e, i) => (
-          <li key={i} className="mb-10 ml-6">
-            <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full -left-3 ring-8 ring-black">
-              <svg
-                className="w-3 h-3 text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <circle cx="10" cy="10" r="10" />
-              </svg>
-            </span>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-              <time className="text-sm font-medium text-gray-400 min-w-[120px]">
-                {e.date}
-              </time>
-              <span className="text-base font-normal">{e.desc}</span>
-            </div>
-          </li>
-        ))}
-      </ol>
+      <EventTimeline items={events} />
     </section>
   );
 }

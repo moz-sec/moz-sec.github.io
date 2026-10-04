@@ -8,6 +8,7 @@ const navItems = [
   { label: "リンク", href: "#links" },
   { label: "資格", href: "#certifications" },
   { label: "経歴", href: "#background" },
+  { label: "活動", href: "#activities" },
 ];
 
 export default function Navbar() {

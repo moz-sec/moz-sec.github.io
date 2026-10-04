@@ -7,6 +7,7 @@ import Background from "./components/Background";
 import Interest from "./components/Interest";
 import Links from "./components/Link";
 import Certifications from "./components/Certifications";
+import Activities from "./components/Activities";
 
 export default function Home() {
   return (
@@ -51,7 +52,10 @@ export default function Home() {
         <Links />
         <Skills />
         <Certifications />
-        <Background />
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-12 px-4 lg:grid-cols-2">
+          <Background />
+          <Activities />
+        </div>
       </main>
     </>
   );

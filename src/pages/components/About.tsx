@@ -8,10 +8,7 @@ const About = () => {
   const { isDark } = useDarkMode();
 
   return (
-    <section
-      id="about"
-      className="max-w-4xl mx-auto py-12 text-[var(--foreground)]"
-    >
+    <section id="about" className="max-w-4xl mx-auto py-12 text-(--foreground)">
       <h2 className="text-2xl font-bold mb-8 text-center tracking-wide relative">
         <span className="relative z-10">自己紹介</span>
       </h2>
